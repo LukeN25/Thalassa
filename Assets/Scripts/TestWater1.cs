@@ -23,14 +23,14 @@ public class TestWater1 : MonoBehaviour
             float pX = (verts[i].x * scale1) + (Time.time * waveSpeed1) * -2;
             float pZ = (verts[i].z * scale1) + (Time.time * waveSpeed1) * -2;
             // Update the Y component of each vertices using perlin noise
-            verts[i].y = Mathf.PerlinNoise(pX, pZ) * waveHeight1;
+            verts[i].y = Mathf.PerlinNoise(pX + 1, pZ + 1) * waveHeight1;
         }
         // Update the vertices
         mF.mesh.vertices = verts;
         // Recalculate normals as triangles have changed
-        mF.mesh.RecalculateNormals();
+        //mF.mesh.RecalculateNormals();
         // Recalculate bounds as triangles have changed
-        mF.mesh.RecalculateBounds();
+        //mF.mesh.RecalculateBounds();
     }
 }
 
