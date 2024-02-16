@@ -6,22 +6,15 @@ using UnityEngine.UIElements;
 public class PipeRotateManager : MonoBehaviour
 {
 
-    //public GameObject pipe1;
-
-    public bool canRotate = false;
-
-    void Start()
-    {
-        
-    }
-
+    public bool canRotate = true;
+    public Animator animator;
+    float newPos = 0;
     
     void Update()
     {
-        //if(pipeRotate == true)
+        if(newPos == 4)
         {
-            //transform.Rotate(90, 0, 0);
-            //pipeRotate = false;
+            newPos = 0;
         }
     }
 
@@ -29,7 +22,8 @@ public class PipeRotateManager : MonoBehaviour
     {
         if(col.tag == "Wrench" && canRotate == true)
         {
-            transform.Rotate(90, 0, 0);
+            newPos += 1;
+            animator.SetFloat("Pos", newPos);
             canRotate = false;
             Debug.Log("wrench");
         }
