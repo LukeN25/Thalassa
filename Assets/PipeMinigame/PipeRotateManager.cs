@@ -25,7 +25,7 @@ public class PipeRotateManager : MonoBehaviour
             newPos += 1;
             animator.SetFloat("Pos", newPos);
             canRotate = false;
-            Debug.Log("wrench");
+            //Debug.Log("wrench");
         }
     }
 

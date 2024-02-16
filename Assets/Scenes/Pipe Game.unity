@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 341782461}
   - component: {fileID: 341782466}
   m_Layer: 0
-  m_Name: Pipes5
+  m_Name: Pipe6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,11 +356,11 @@ Transform:
   m_GameObject: {fileID: 341782460}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.2880654, y: 1.8675122, z: 6.47}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1035533554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &341782466
 Animator:
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 691271398}
   - component: {fileID: 691271403}
   m_Layer: 0
-  m_Name: Pipes4
+  m_Name: Pipe5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -498,11 +498,11 @@ Transform:
   m_GameObject: {fileID: 691271397}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.2880654, y: 1.8675122, z: 4.57}
+  m_LocalPosition: {x: 0, y: 0, z: -1.8999996}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1035533554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &691271403
 Animator:
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 776663877}
   - component: {fileID: 776663882}
   m_Layer: 0
-  m_Name: Pipes3
+  m_Name: Pipe4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -640,11 +640,11 @@ Transform:
   m_GameObject: {fileID: 776663876}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.2880654, y: 1.8675122, z: 2.86}
+  m_LocalPosition: {x: 0, y: 0, z: -3.61}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1035533554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &776663882
 Animator:
@@ -682,7 +682,7 @@ GameObject:
   - component: {fileID: 926770295}
   - component: {fileID: 926770300}
   m_Layer: 0
-  m_Name: Pipes1
+  m_Name: Pipe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -782,11 +782,11 @@ Transform:
   m_GameObject: {fileID: 926770294}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.2880654, y: 1.8675122, z: -0.57}
+  m_LocalPosition: {x: 0, y: 0, z: -7.04}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1035533554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &926770300
 Animator:
@@ -809,6 +809,62 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1035533552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1035533554}
+  - component: {fileID: 1035533553}
+  m_Layer: 0
+  m_Name: PipeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1035533553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035533552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb05f07da1557c3438db62a577f6392c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pipe1: {fileID: 1999350512}
+  Pipe2: {fileID: 926770294}
+  Pipe3: {fileID: 1517457995}
+  Pipe4: {fileID: 776663876}
+  Pipe5: {fileID: 691271397}
+  Pipe6: {fileID: 341782460}
+--- !u!4 &1035533554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035533552}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.2880654, y: 1.8675122, z: 6.47}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1999350517}
+  - {fileID: 926770299}
+  - {fileID: 1517458000}
+  - {fileID: 776663881}
+  - {fileID: 691271402}
+  - {fileID: 341782465}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1517457995
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,7 +880,7 @@ GameObject:
   - component: {fileID: 1517457996}
   - component: {fileID: 1517458001}
   m_Layer: 0
-  m_Name: Pipes2
+  m_Name: Pipe3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -924,11 +980,11 @@ Transform:
   m_GameObject: {fileID: 1517457995}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.2880654, y: 1.8675122, z: 1.06}
+  m_LocalPosition: {x: 0, y: 0, z: -5.41}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1035533554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1517458001
 Animator:
@@ -1191,7 +1247,7 @@ GameObject:
   - component: {fileID: 1999350513}
   - component: {fileID: 1999350518}
   m_Layer: 0
-  m_Name: Pipes
+  m_Name: Pipe1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1290,12 +1346,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999350512}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2880654, y: 1.8675122, z: -2.1587975}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -8.628798}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1035533554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1999350518
 Animator:
@@ -1325,9 +1381,4 @@ SceneRoots:
   - {fileID: 1846292219}
   - {fileID: 138447942}
   - {fileID: 1835659973}
-  - {fileID: 1999350517}
-  - {fileID: 926770299}
-  - {fileID: 1517458000}
-  - {fileID: 776663881}
-  - {fileID: 691271402}
-  - {fileID: 341782465}
+  - {fileID: 1035533554}
