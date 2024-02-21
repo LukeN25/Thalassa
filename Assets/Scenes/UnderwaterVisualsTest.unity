@@ -180,44 +180,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 823a57210b4b71041aa521e75899a891, type: 3}
---- !u!84 &384018819
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!2083052967 &730151150 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 6740955588770258357, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
+  m_PrefabInstance: {fileID: 8147802052878383228}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterDepthMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 5
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 94
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
+--- !u!4 &730151151 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3558070346666688552, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
+  m_PrefabInstance: {fileID: 8147802052878383228}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1009332657
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,10 +383,11 @@ Transform:
   m_GameObject: {fileID: 1270115962}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.79, z: 0}
+  m_LocalPosition: {x: 0, y: 0.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 730151151}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1270115966
@@ -434,6 +407,7 @@ MonoBehaviour:
   postProcessingVolume: {fileID: 1605896372}
   surfacePostProcessing: {fileID: 11400000, guid: 4335d6a08eaf2bd469780364b4426280, type: 2}
   underwaterPostProcessing: {fileID: 11400000, guid: 5b3bd88ccc3745543894140a38666a54, type: 2}
+  Breathing: {fileID: 730151150}
 --- !u!114 &1270115967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,6 +613,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!84 &1645644900
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterDepthMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 94
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1 &1929841365
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +832,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1270115965}
     m_Modifications:
     - target: {fileID: 758215115368763038, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
       propertyPath: m_Name
@@ -828,15 +840,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3558070346666688552, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7
+      value: -0.055
       objectReference: {fileID: 0}
     - target: {fileID: 3558070346666688552, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.79
       objectReference: {fileID: 0}
     - target: {fileID: 3558070346666688552, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.466
       objectReference: {fileID: 0}
     - target: {fileID: 3558070346666688552, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -844,15 +856,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3558070346666688552, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3558070346666688552, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3558070346666688552, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3558070346666688552, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -864,6 +876,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3558070346666688552, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740955588770258357, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
+      propertyPath: m_ResetSeedOnPlay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740955588770258357, guid: 0e232cedb5204164d973a977ba79d4bd, type: 3}
+      propertyPath: m_InitialEventNameOverriden
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -882,4 +902,3 @@ SceneRoots:
   - {fileID: 1009332661}
   - {fileID: 7258459562587769419}
   - {fileID: 281322131}
-  - {fileID: 8147802052878383228}
