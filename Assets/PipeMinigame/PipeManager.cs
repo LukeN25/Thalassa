@@ -38,11 +38,17 @@ public class PipeManager : MonoBehaviour
         _direction6 = Pipe6.transform.up * -1;
 
         pipe1Right = Physics.Raycast(Pipe1.transform.position, _direction1, 10f , pipeRight);
-        pipe2Right = Physics.Raycast(Pipe2.transform.position, _direction1, 10f , pipeRight);
-        pipe3Right = Physics.Raycast(Pipe3.transform.position, _direction1, 10f , pipeRight);
-        pipe4Right = Physics.Raycast(Pipe4.transform.position, _direction1, 10f , pipeRight);
-        pipe5Right = Physics.Raycast(Pipe5.transform.position, _direction1, 10f , pipeRight);
-        pipe6Right = Physics.Raycast(Pipe6.transform.position, _direction1, 10f , pipeRight);
+        pipe2Right = Physics.Raycast(Pipe2.transform.position, _direction2, 10f , pipeRight);
+        pipe3Right = Physics.Raycast(Pipe3.transform.position, _direction3, 10f , pipeRight);
+        pipe4Right = Physics.Raycast(Pipe4.transform.position, _direction4, 10f , pipeRight);
+        pipe5Right = Physics.Raycast(Pipe5.transform.position, _direction5, 10f , pipeRight);
+        pipe6Right = Physics.Raycast(Pipe6.transform.position, _direction6, 10f , pipeRight);
+        //Debug.DrawRay(Pipe1.transform.position, _direction1, 10f , pipeRight);
+        //Debug.DrawRay(Pipe2.transform.position, _direction1, 10f , pipeRight);
+        //Debug.DrawRay(Pipe3.transform.position, _direction1, 10f , pipeRight);
+        //Debug.DrawRay(Pipe4.transform.position, _direction1, 10f , pipeRight);
+        //Debug.DrawRay(Pipe5.transform.position, _direction1, 10f , pipeRight);
+        //Debug.DrawRay(Pipe6.transform.position, _direction1, 10f , pipeRight);
 
         if(pipe1Right == true && pipe2Right == true && pipe3Right == true && pipe4Right == true && pipe5Right == true && pipe6Right == true)
         {
