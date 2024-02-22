@@ -34,7 +34,7 @@ public class PipeManager : MonoBehaviour
         _direction2 = Pipe2.transform.up * -1;
         _direction3 = Pipe3.transform.up * -1;
         _direction4 = Pipe4.transform.up * -1;
-        _direction5 = Pipe5.transform.up * -1;
+        _direction5 = Pipe5.transform.up;
         _direction6 = Pipe6.transform.up * -1;
 
         pipe1Right = Physics.Raycast(Pipe1.transform.position, _direction1, 10f , pipeRight);
@@ -53,6 +53,11 @@ public class PipeManager : MonoBehaviour
         if(pipe1Right == true && pipe2Right == true && pipe3Right == true && pipe4Right == true && pipe5Right == true && pipe6Right == true)
         {
             Debug.Log("Win");
+        }
+
+        if (pipe1Right == true || pipe2Right == true || pipe3Right == true || pipe4Right == true || pipe5Right == true || pipe6Right == true)
+        {
+            Debug.Log("Ray check");
         }
     }
 }
