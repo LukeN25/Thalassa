@@ -2058,6 +2058,7 @@ MonoBehaviour:
   pipeRight:
     serializedVersion: 2
     m_Bits: 64
+  blue: {r: 0, g: 0, b: 0, a: 0}
   pipe1Right: 0
   pipe2Right: 0
   pipe3Right: 0

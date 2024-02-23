@@ -12,6 +12,7 @@ public class PipeManager : MonoBehaviour
     public GameObject Pipe6;
 
     public LayerMask pipeRight;
+    public Color blue;
 
     Vector3 _direction1;
     Vector3 _direction2;
@@ -27,7 +28,11 @@ public class PipeManager : MonoBehaviour
     public bool pipe5Right;
     public bool pipe6Right;
 
-    
+    private void Start()
+    {
+        blue = new Color(0, 0, 255);
+    }
+
     void Update()
     {
         _direction1 = Pipe1.transform.up * -1;
@@ -47,7 +52,7 @@ public class PipeManager : MonoBehaviour
         //Debug.DrawRay(Pipe2.transform.position, _direction1, 10f , pipeRight);
         //Debug.DrawRay(Pipe3.transform.position, _direction1, 10f , pipeRight);
         //Debug.DrawRay(Pipe4.transform.position, _direction1, 10f , pipeRight);
-        //Debug.DrawRay(Pipe5.transform.position, _direction1, 10f , pipeRight);
+        Debug.DrawRay(Pipe5.transform.position, _direction1, blue, pipeRight);
         //Debug.DrawRay(Pipe6.transform.position, _direction1, 10f , pipeRight);
 
         if(pipe1Right == true && pipe2Right == true && pipe3Right == true && pipe4Right == true && pipe5Right == true && pipe6Right == true)
