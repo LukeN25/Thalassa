@@ -4530,11 +4530,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1329582253165369237, guid: 823a57210b4b71041aa521e75899a891, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1469476136706103928, guid: 823a57210b4b71041aa521e75899a891, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8522925157378152791, guid: 823a57210b4b71041aa521e75899a891, type: 3}
       propertyPath: m_LocalScale.x
