@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.VFX;
+using UnityEngine.SceneManagement;
 
 public class UnderwaterDepth : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class UnderwaterDepth : MonoBehaviour
     [SerializeField] private VolumeProfile underwaterPostProcessing;
 
     private bool underWater = false;
+    public string SceneToLoad;
 
     [Header("VisualFX")]
     [SerializeField] VisualEffect Breathing;
@@ -32,6 +34,7 @@ public class UnderwaterDepth : MonoBehaviour
             Debug.Log("Fxplay possible");
 
             underWater = true;
+            StartCoroutine(Drown());
         }
         else if(mainCamera.position.y > waterTransform.position.y && underWater)
         {
@@ -39,6 +42,7 @@ public class UnderwaterDepth : MonoBehaviour
 
             underWater = false;
             Debug.Log("Fxplay inpossible");
+            StopAllCoroutines();
         }
     }
 
@@ -61,5 +65,11 @@ public class UnderwaterDepth : MonoBehaviour
 
         Debug.Log("Playing Particle");
         Breathing.Play();
+    }
+
+    IEnumerator Drown()
+    {
+        yield return new WaitForSeconds(15);
+        SceneManager.LoadScene(SceneToLoad);
     }
 }

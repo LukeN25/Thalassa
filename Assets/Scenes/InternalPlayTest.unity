@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11890004, g: 0.31090894, b: 0.35299024, a: 1}
+  m_IndirectSpecularColor: {r: 0.118899934, g: 0.31090936, b: 0.35299113, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7418,6 +7418,7 @@ MonoBehaviour:
   postProcessingVolume: {fileID: 0}
   surfacePostProcessing: {fileID: 11400000, guid: 4335d6a08eaf2bd469780364b4426280, type: 2}
   underwaterPostProcessing: {fileID: 11400000, guid: 5b3bd88ccc3745543894140a38666a54, type: 2}
+  SceneToLoad: 
   Breathing: {fileID: 1104559400}
 --- !u!4 &2871854917770447272
 Transform:
@@ -13158,6 +13159,7 @@ MonoBehaviour:
   postProcessingVolume: {fileID: 1595111768}
   surfacePostProcessing: {fileID: 11400000, guid: 4335d6a08eaf2bd469780364b4426280, type: 2}
   underwaterPostProcessing: {fileID: 11400000, guid: 5b3bd88ccc3745543894140a38666a54, type: 2}
+  SceneToLoad: Game Over
   Breathing: {fileID: 1104559400}
 --- !u!1 &8189171603193009587
 GameObject:
