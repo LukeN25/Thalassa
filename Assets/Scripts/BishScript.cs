@@ -64,7 +64,7 @@ public class BishScript : MonoBehaviour
 
         isSwimmingAway = true;
 
-        Invoke("ResetCircling", 10f);
+        Invoke("ResetCircling", 20f);
     }
 
     public void DamageShip()
