@@ -10,13 +10,15 @@ public class HornScript : MonoBehaviour
 
     public Animator submarineAnimator;
 
-    private bool canHonkHorn;
+    private bool canHonkHorn = true;
     
     // Start is called before the first frame update
     public void HonkHorn()
     {
         if (canHonkHorn)
         {
+
+            Debug.Log("Pushed Button");
 
             submarineAnimator.SetTrigger("Honk");
 
