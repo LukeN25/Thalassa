@@ -8,6 +8,8 @@ public class HornScript : MonoBehaviour
 
     public AudioSource audioSource;
 
+    public Animator submarineAnimator;
+
     private bool canHonkHorn;
     
     // Start is called before the first frame update
@@ -15,6 +17,9 @@ public class HornScript : MonoBehaviour
     {
         if (canHonkHorn)
         {
+
+            submarineAnimator.SetTrigger("Honk");
+
             bish.ScareOffBish();
 
             audioSource.Play();
