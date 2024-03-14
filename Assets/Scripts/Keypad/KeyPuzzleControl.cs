@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class KeyPuzzleControl : MonoBehaviour
 {
     public static string KeyCode = "1111";
     public static string InputCode = "";
     public static int CodeLength = 0;
-    public Text Display;
+    public TextMeshProUGUI Display;
 
     void Update()
     {
