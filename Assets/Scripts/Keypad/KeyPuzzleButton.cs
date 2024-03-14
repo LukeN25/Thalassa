@@ -6,40 +6,70 @@ using UnityEngine;
 
 public class KeyPuzzleButton : MonoBehaviour
 {
-    /*public bool LookingAt = false;
-
-    public void Looking()
-    {
-        LookingAt = true;
-    }
-    public void NotLooking()
-    {
-        LookingAt = false;
-    }
-    */
-
     string inputedKeys = "";
+
+    public string winKey = "1234";
 
     public TextMeshProUGUI keyPadText;
 
-    void Update()
-    {
-        /*if (Input.GetButtonDown("Fire1") && LookingAt == true)
-        {
-            Debug.Log("Hit");
-            KeyPuzzleControl.CodeLength++;
-            KeyPuzzleControl.InputCode += gameObject.name;
-        }
-        */
+    private bool solved = false;
 
-        keyPadText.text = inputedKeys;
-    }
+    public AudioSource beep;
+    public AudioSource unlock;
+    public AudioSource incorrect;
+
+    public Animator animator;
 
     public void ButtonPress(string input)
     {
-        Debug.Log("Button Clicked");
-        inputedKeys += input;
+        if (inputedKeys.Length == 4 && inputedKeys != winKey)
+        {
+            inputedKeys = "";
+        }
+
+        if (!solved)
+        {
+            inputedKeys += input;
+
+            keyPadText.text = inputedKeys;
+
+            beep.Play();
+        }
     }
 
+    public void EnterCode()
+    {
+        if (inputedKeys == winKey)
+        {
+            Win();
+        }
+        else
+        {
+            Lose();
+        }
+    }
 
+    public void ClearKeyPad()
+    {
+        inputedKeys = "";
+        keyPadText.text = inputedKeys;
+    }
+
+    private void Win()
+    {
+        if (!solved) 
+        {
+            solved = true;
+            animator.SetTrigger("Correct");
+
+            unlock.Play();
+        }
+    }
+
+    void Lose()
+    {
+        ClearKeyPad();
+        incorrect.Play();
+        animator.SetTrigger("Incorrect");
+    }
 }
