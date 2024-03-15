@@ -15,7 +15,7 @@ public class DoorHandle : MonoBehaviour
         {
             anim.SetBool("Interacted", true);
             Debug.Log("working");
-            StartCoroutine LoadWin();
+            StartCoroutine(LoadWin());
         }
     }
 
