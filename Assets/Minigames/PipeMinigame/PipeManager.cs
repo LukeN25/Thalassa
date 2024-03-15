@@ -34,9 +34,12 @@ public class PipeManager : MonoBehaviour
     public bool pipe5Right;
     public bool pipe6Right;
 
+    public bool Win;
+
     private void Start()
     {
         blue = new Color(0, 0, 255);
+        Win = false;
     }
 
     void Update()
@@ -64,7 +67,7 @@ public class PipeManager : MonoBehaviour
 
         if(pipe1Right == true && pipe2Right == true && pipe3Right == true && pipe4Right == true && pipe5Right == true && pipe6Right == true)
         {
-            Debug.Log("Win");
+            Win = true;
         }
 
 
