@@ -21310,7 +21310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6bf904e410ee8479f9093d8830d1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LocomotionProvider: {fileID: 2736478856115395480}
+  m_LocomotionProvider: {fileID: 0}
   m_MinHeight: 0
   m_MaxHeight: Infinity
 --- !u!114 &8189171602584548042
@@ -21432,7 +21432,7 @@ MonoBehaviour:
   postProcessingVolume: {fileID: 1595111768}
   surfacePostProcessing: {fileID: 11400000, guid: 4335d6a08eaf2bd469780364b4426280, type: 2}
   underwaterPostProcessing: {fileID: 11400000, guid: 5b3bd88ccc3745543894140a38666a54, type: 2}
-  SceneToLoad: Game Over
+  SceneToLoad: Main Menu
   Breathing: {fileID: 1104559400}
 --- !u!1 &8189171603193009587
 GameObject:
