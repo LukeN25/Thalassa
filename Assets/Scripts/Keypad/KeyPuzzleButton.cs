@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlTypes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class KeyPuzzleButton : MonoBehaviour
 {
@@ -12,13 +13,15 @@ public class KeyPuzzleButton : MonoBehaviour
 
     public TextMeshProUGUI keyPadText;
 
-    private bool solved = false;
+    public bool solved = false;
 
     public AudioSource beep;
     public AudioSource unlock;
     public AudioSource incorrect;
 
     public Animator animator;
+
+    public XRGrabInteractable doorInteractable;
 
     public void ButtonPress(string input)
     {
@@ -63,6 +66,8 @@ public class KeyPuzzleButton : MonoBehaviour
             animator.SetTrigger("Correct");
 
             unlock.Play();
+
+            doorInteractable.enabled = true;
         }
     }
 
