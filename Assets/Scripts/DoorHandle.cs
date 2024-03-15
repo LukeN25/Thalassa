@@ -11,9 +11,11 @@ public class DoorHandle : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if(col.tag == "Hands" && pipemanager.Win == true)
+        if(col.tag == "Wrench" && pipemanager.Win == true)
         {
             anim.SetBool("Interacted", true);
+            Debug.Log("working");
+            StartCoroutine LoadWin();
         }
     }
 
