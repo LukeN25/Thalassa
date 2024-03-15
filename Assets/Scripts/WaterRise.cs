@@ -14,7 +14,7 @@ public class WaterRise : MonoBehaviour
     {
         if( waterRise == true)
         {
-            transform.position = transform.position + new Vector3(0, 0.00025f, 0);
+            transform.position = transform.position + new Vector3(0, 0.00012f, 0);
         }
     }
 }
