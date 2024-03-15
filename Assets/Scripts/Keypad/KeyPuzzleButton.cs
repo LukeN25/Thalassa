@@ -22,6 +22,7 @@ public class KeyPuzzleButton : MonoBehaviour
     public Animator animator;
 
     public XRGrabInteractable doorInteractable;
+    public Rigidbody rigidBody;
 
     public void ButtonPress(string input)
     {
@@ -67,6 +68,7 @@ public class KeyPuzzleButton : MonoBehaviour
 
             unlock.Play();
 
+            rigidBody.isKinematic = false;
             doorInteractable.enabled = true;
         }
     }
